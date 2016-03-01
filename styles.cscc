@@ -1,0 +1,303 @@
+//@extend-elements
+//original selectors
+//html, body
+%extend_1 {
+    height: 100%;
+    margin: 0;
+}
+
+//original selectors
+//html, body, div, p, a, span
+%extend_2 {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+}
+
+//original selectors
+//*, *:before, *:after
+%extend_3 {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: inherit;
+}
+
+//original selectors
+//.red, .green
+%extend_4 {
+    display: table;
+    margin: 0 auto;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: 200;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 2px;
+}
+
+//original selectors
+//.loader, .loader:before, .loader:after
+%extend_5 {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+}
+
+//original selectors
+//.loader:before, .loader:after
+%extend_6 {
+    position: absolute;
+    content: '';
+}
+
+//original selectors
+//#playlist, #player-vjs-playlist
+%extend_7 {
+    width: 100%;
+}
+
+
+html {
+    @extend %extend_1;
+    @extend %extend_2;
+}
+body {
+    @extend %extend_1;
+    position: relative;
+    overflow: hidden;
+    @extend %extend_2;
+}
+div {
+    @extend %extend_2;
+}
+p {
+    @extend %extend_2;
+}
+a {
+    @extend %extend_2;
+}
+span {
+    @extend %extend_2;
+}
+* {
+    @extend %extend_3;
+    &:before {
+        @extend %extend_3;
+    }
+    &:after {
+        @extend %extend_3;
+    }
+}
+.red {
+    @extend %extend_4;
+    background: #cf0000;
+}
+.green {
+    @extend %extend_4;
+    background: #009e9c;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.loader {
+    @extend %extend_5;
+    font-size: 20px;
+    text-indent: -99999em;
+    margin: 55px auto;
+    position: relative;
+    width: 10em;
+    height: 10em;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 0 0 0 1em #f5f5f5;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateZ(0);
+    &:before {
+        @extend %extend_5;
+        @extend %extend_6;
+        width: 5.2em;
+        height: 10.2em;
+        background: #fff;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 10.2em 0 0 10.2em;
+        top: -0.1em;
+        left: -0.1em;
+        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+        transform-origin: 5.2em 5.1em;
+        animation: load2 2s infinite ease 1.5s;
+    }
+    &:after {
+        @extend %extend_5;
+        @extend %extend_6;
+        width: 5.2em;
+        height: 10.2em;
+        background: #fff;
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0 10.2em 10.2em 0;
+        top: -0.1em;
+        left: 5.1em;
+        //Instead of the line below you could use @include transform-origin($origin-x, $origin-y, $origin-z, $only3d)
+        transform-origin: 0 5.1em;
+        animation: load2 2s infinite ease;
+    }
+}
+@-webkit-keyframes load2 {
+    0% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(0deg);
+    }
+    100% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(360deg);
+    }
+}
+@keyframes load2 {
+    0% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(0deg);
+    }
+    100% {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(360deg);
+    }
+}
+.kaltura-player-wrap {
+    margin: 0 auto;
+    max-width: 100%;
+    background: #000;
+    width: 100%;
+    display: none;
+    position: relative;
+    height: 100%;
+}
+.video-player-chrometv {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    z-index: 99999;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0;
+    background-color: #333;
+    margin: 0 auto;
+    max-height: 800px;
+}
+#playlist {
+    @extend %extend_7;
+}
+#player-vjs-playlist {
+    @extend %extend_7;
+}
+.video-info {
+    color: #5f5c5c;
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: -200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    .wrap {
+        max-width: 800px;
+        margin: 0 auto;
+        .text-info {
+            font-weight: 200;
+            font-size: 21px;
+            margin-top: 60px;
+            opacity: 0;
+        }
+        .video-text {
+            margin: 20px 0;
+            font-family: MyriadPro-Light, sans-serif;
+            color: #515151;
+            font-size: 100px;
+            line-height: 100px;
+            font-weight: normal;
+            text-transform: none;
+            .italic {
+                color: #009c96;
+                font-style: italic;
+            }
+            .icon {
+                position: relative;
+                white-space: nowrap;
+                .icon-text {
+                    position: absolute;
+                    font-size: 50px;
+                    color: #009c96;
+                    font-weight: bold;
+                    left: 23px;
+                    top: 0;
+                }
+                i {
+                    font-size: 100px;
+                }
+            }
+        }
+    }
+    .video-progress-bar {
+        height: 10px;
+        background: #f5f5f5;
+        overflow: hidden;
+        max-width: 400px;
+        margin: 0 auto;
+        top: 20px;
+        position: relative;
+        span {
+            display: block;
+            height: 100%;
+            background-color: #009c96;
+            background-image: linear-gradient(center bottom, #2bc253 37%, #54f054 69%);
+            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+            box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            width: 0;
+        }
+    }
+}
