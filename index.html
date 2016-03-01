@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>     
+
+  <link rel="stylesheet" href="/sites/all/themes/tseven/css/font-awesome.min.css"></link>
+  <link rel="stylesheet" href="/sites/all/themes/tseven/css/scald-player-chrometv.css"></link>
+
+</head>
+<body> 
+
+  <script>
+      //nessesary to have the kaltura video iframe not throw any errors
+      var $ = jQuery;
+  </script>
+   
+  <!-- Substitute {partner_id} for your Kaltura partner id, {uiconf_id} for uiconf player id -->
+  <script src="//some-kaltura-server.com/p/101/sp/10100/embedIframeJs/uiconf_id/23448200/partner_id/101"></script>
+
+  <div class="kaltura-player-wrap" id="kaltura-player-wrap"> 
+      <div id="video-player-chrometv" class="video-player-chrometv" itemprop="video" intemscope itemtype="http://schema.org/VideoObject"></div>
+  </div> 
+
+  <div class="video-info" id="video-info">
+    <div class="loader" id="loader"></div>
+    <div class="wrap">
+      
+      <!-- main site logo -->
+      <h1 class="video-text" id="video-text">
+        Welcome to Chrome<span class="italic">Box</span> 
+        <span class="icon">
+          <span class="icon-text">TV</span>
+          <i class="fa fa-television"></i>
+        </span>
+      </h1> 
+      
+      <!-- loading bar -->
+      <div class="video-progress-bar" id="video-progress-bar">
+        <span></span>
+      </div>
+      
+      <!-- optional info -->
+      <div class="text-info" id="text-info"></div>
+
+    </div>
+  </div> 
+  
+  <script type="text/javascript" src="/sites/all/themes/tseven/js/scald_player_chrometv_display.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/tseven/js/scald_player_chrometv_database.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/tseven/js/scald_player_chrometv_video.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/tseven/js/scald_player_chrometv_kaltura.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/tseven/js/scald_player_chrometv_main.js"></script>
+
+  </body>
+</html>
