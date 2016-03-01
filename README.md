@@ -2,7 +2,9 @@
 
 A small project I worked on that lets you play videos offline on a chromebox. 
 See the Main class for implementation overview. Relies heavily on jQuery promises to synchronize workflow. 
+
   Note - project is not finished - still need to finish the part that preloads new videos once a new playlist starts playing/fix small animation bugs
+  
   Note - files intentionally left incomplete
 
 Set up
